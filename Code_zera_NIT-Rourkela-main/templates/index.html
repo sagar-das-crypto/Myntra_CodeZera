@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+
+    <div class="container my-3">
+        <h2 style="color:rgb(201, 31, 150);">Add Preference</h2>
+        <form action="/" method="POST">
+            <div class="mb-3">
+              <label for="title" class="form-label" style="color:rgb(201, 31, 150);">Categories(Moisturizer/ Cleanser/ Treatment/ Face Mask/ Eye cream/ Sun protect)</label>
+              <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+            </div>
+            <!-- <div class="mb-3">
+              <label for="title">Categories:</label>
+              <select name="title" id="title">
+                <option value="o11">Moisturizer</option>
+                <option value="o12">Cleanser</option>
+                <option value="o13">Treatment</option>
+                <option value="o14">Face Mask</option>
+                <option value="o15">Eye cream</option>
+                <option value="o16">Sun protect</option>
+              </select>
+            </div> -->
+            <div class="mb-3">
+              <label for="minp" class="form-label" style="color:rgb(201, 31, 150);">Minimum Price</label>
+              <input type="text" class="form-control" name="minp" id="minp">
+            </div>
+            <div class="mb-3">
+              <label for="maxp" class="form-label" style="color:rgb(201, 31, 150);">Maximum Price</label>
+              <input type="text" class="form-control" name="maxp" id="maxp">
+            </div>
+            <div class="mb-3">
+              <label for="comb" class="form-label" style="color:rgb(201, 31, 150);">Combination(Yes/No)</label>
+              <input type="text" class="form-control" name="comb" id="comb">
+            </div>
+            <div class="mb-3">
+              <label for="dry" class="form-label" style="color:rgb(201, 31, 150);">Dry(Yes/No)</label>
+              <input type="text" class="form-control" name="dry" id="dry">
+            </div>
+            <div class="mb-3">
+              <label for="normal" class="form-label" style="color:rgb(201, 31, 150);">Normal(Yes/No)</label>
+              <input type="normal" class="form-control" name="normal" id="normal">
+            </div>
+            <div class="mb-3">
+              <label for="oily" class="form-label" style="color:rgb(201, 31, 150);">Oily(Yes/No)</label>
+              <input type="text" class="form-control" name="oily" id="oily">
+            </div>
+            <div class="mb-3">
+              <label for="sensitive" class="form-label" style="color:rgb(201, 31, 150);">Sensitive(Yes/No)</label>
+              <input type="text" class="form-control" name="sensitive" id="sensitive">
+            </div>
+
+
+
+
+            <!-- <div class="mb-3">
+              <label for="comb">Combination:</label>
+              <select name="comb" id="comb">
+                <option value="volvo1">No</option>
+                <option value="saab1">Yes</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="dry">Dry:</label>
+              <select name="dry" id="dry">
+                <option value="volvo2">No</option>
+                <option value="saab2">Yes</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="normal">Normal:</label>
+              <select name="normal" id="normal">
+                <option value="volvo3">No</option>
+                <option value="saab3">Yes</option>
+              </select>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="oily">Oily:</label>
+              <select name="oily" id="oily">
+                <option value="volvo4">No</option>
+                <option value="saab4">Yes</option>
+              </select>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="sensitive">Sensitive:</label>
+              <select name="sensitive" id="sensitive">
+                <option value="volvo5">No</option>
+                <option value="saab5">Yes</option>
+              </select>
+            </div> -->
+
+
+
+
+
+
+            <!-- <div class="mb-3">
+              <label for="desc" class="form-label">2</label>
+              <input type="text" class="form-control" name="desc" id="desc">
+            </div> -->
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+    </div>
+
+    <!-- <div class="container my-3">
+      <h2>Add Name</h2>
+      <form action="/" method="POST">
+          <div class="mb-3">
+            <label for="desc" class="form-label">2</label>
+            <input type="text" class="form-control" name="desc" id="desc">
+          </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div> -->
+
+    <!-- <div class="container my-3">
+        <h2>Your Todos</h2>
+        {% if allTodo|length == 0 %}
+        <div class="alert alert-dark" role="alert">
+          No todos found. Add your first todo.
+        </div>
+          {% else %}
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">SNo</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for todo in allTodo %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.desc}}</td>
+                    <td>{{todo.date_created}}</td>
+                    <td>
+                      <a href="/update/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</button>
+                      <a href="/delete/{{todo.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</button>
+                    </td>
+                </tr>   
+                {% endfor %}
+                {% endif %}
+              </tbody>
+            </table>
+          
+    </div> -->
+
+
+     <!-- {% for item in tdf %}
+     <table>
+       <tr>
+         <td>{{item[0]}}</td>
+         <td>{{item[1]}}</td>
+         <td>{{item[2]}}</td>
+         <td>{{item[3]}}</td>
+       </tr>
+     </table>
+     {% endfor %} -->
+
+
+     <div class="container my-3 table-responsive">
+        {% for item in tdf %}
+        <table class="table table-danger table-striped align-middle">
+         <thead>
+           <tr>
+             <th scope="col">Sno</th>
+             <th scope="col">Label</th>
+             <th scope="col">Brand</th>
+             <th scope="col">Name</th>
+             <th scope="col">Price</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th scope="row">{{loop.index}}</th>
+             <td>{{item[0]}}</td>
+             <td>{{item[1]}}</td>
+             <td>{{item[2]}}</td>
+             <td>{{item[3]}}</td>
+           </tr>
+         </tbody>
+       </table>
+       {% endfor %}
+     </div>
+    <!-- <script>
+      for (let i = 0; i < tdf.length; i++) {
+        document.write(tdf[i])
+      }
+    </script> -->
+
+    <!-- <p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">{{tdf.Label}}</th>
+            <th scope="col">{{tdf.Brand}}</th>
+            <th scope="col">{{tdf.Name}}</th>
+            <th scope="col">{{tdf.Price}}</th>
+          </tr>
+        </thead>
+      </table>
+    </p> -->
+
+    <!-- <div class="container my-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sno2</th>
+            <th scope="col">Label</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for todo2 in allTodo2 %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{todo2.label}}</td>
+            <td>{{todo2.brand}}</td>
+            <td>{{todo2.date_created2}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div> -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+{% endblock body %}

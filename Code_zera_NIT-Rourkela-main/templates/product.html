@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+
+
+
+
+
+ <div class="container my-3">
+     <h2 style="color:rgb(201, 31, 150);">Add Name</h2>
+     <form action="/show" method="POST">
+         <div class="mb-3">
+             <label for="desc" class="form-label" style="color:rgb(201, 31, 150);">Recommendation</label>
+             <input type="text" class="form-control" name="desc" id="desc">
+         </div>
+         <button type="submit" class="btn btn-danger">Submit</button>
+         </form>
+     </div>
+     <div class="container"><h2 style="color:rgb(201, 31, 150);">Recommended Product</h2></div>
+     <div class="container my-3 table-responsive text-center">
+        {% for item in tdf2 %}
+        <!-- <table class="table table-dark table-striped align-middle">
+         <thead>
+           <tr>
+             <th scope="col">Sno</th>
+             <th scope="col">Label</th>
+             <th scope="col">Brand</th>
+             <th scope="col">Name</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th scope="row">{{loop.index}}</th>
+             <td>{{item[0]}}</td>
+             <td>{{item[1]}}</td>
+             <td>{{item[2]}}</td>
+           </tr>
+         </tbody>
+       </table> -->
+       <div class="card text-center" style="width: 18rem;">
+        <div class="col">
+
+        </div>
+        <img src="{{url_for('static', filename='cosmetic.jpeg')}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{item[2]}}</h5>
+          <p class="card-text">{{item[0]}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{loop.index}}</li>
+          <li class="list-group-item">{{item[1]}}</li>
+        </ul>
+      </div><br />
+       {% endfor %}
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+{% endblock body %}
